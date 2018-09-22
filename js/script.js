@@ -1,3 +1,6 @@
+
+/*----------Переменные----------*/
+
 var link = document.querySelector('.login-link');
 var popup = document.querySelector('.modal-login');
 var close = popup.querySelector('.modal-close');
@@ -18,13 +21,11 @@ try {
   isStorageSupport = false;
 }
 
-
 /*----------Форма авторизации----------*/
 
 link.addEventListener('click', function (evt) {
   evt.preventDefault();
   popup.classList.add('modal-show');
-
   if (storage) {
     login.value = storage;
     password.focus();
